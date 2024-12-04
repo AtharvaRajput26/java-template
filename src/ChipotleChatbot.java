@@ -22,7 +22,7 @@ public class ChipotleChatbot { //defines the main class
             "Let's try something else. What would you like to do?"
         };
 
-        //creates food objects ( which are instances of the Food class) with attributes
+        //creates food objects ( which are instances of the Food class) with the attributes
         Food burrito = new Food("Burrito", 8.50, "Medium");
         Food tacos = new Food("Tacos", 7.50, "Medium");
         Food lifestyleBowl = new Food("Lifestyle Bowl", 9.50, "Healthy");
