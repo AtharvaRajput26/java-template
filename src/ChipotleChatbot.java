@@ -36,7 +36,7 @@ public class ChipotleChatbot { //defines the main class
 
         while (true) {
             String action = scanner.nextLine().toLowerCase();
-            //Starts an infinite loop to continuously talk to the user
+            //starts an infinite loop to continuously talk to the user
         
 
             if (action.equals("exit")) {
@@ -66,9 +66,9 @@ public class ChipotleChatbot { //defines the main class
         System.out.println("Thank you for using Chipotle Chatbot!");
     }
 
-    // Method to handle placing orders
+    // method to handle placing orders
     private double placeOrder(Scanner scanner, double totalCost, Food burrito, Food tacos, Food lifestyleBowl, Food salad, Food quesadilla) {
-        //The parameters have a Scanner object for input, the running totalCost, a list of available Food options.
+        //the parameters have a Scanner object for input, the running totalCost, a list of available Food options
 
         System.out.println("What would you like to order?");
         System.out.println("Options: Burrito, Tacos, Lifestyle Bowl, Salad, Quesadilla.");
@@ -89,7 +89,8 @@ public class ChipotleChatbot { //defines the main class
         } else {
             System.out.println("We don't have that item.");
             return totalCost;
-    //Matches the user's input to a Food object. If no match, it tells user.
+    //this matches the user's input to a Food object
+    //if no match, it tells user
 
 
         }
@@ -134,7 +135,7 @@ public class ChipotleChatbot { //defines the main class
         return totalCost;
     }
 
-    // Method to handle sides and drinks
+    // method to handle sides and drinks
     private double handleSidesAndDrinks(Scanner scanner, double totalCost) {
         //asks the user to select sides and drinks and updates totalCost
 
@@ -159,10 +160,10 @@ public class ChipotleChatbot { //defines the main class
         return totalCost;
     }
 
-    // Method to handle questions
+    // method to handle questions
     private void handleQuestion(String question, String[] confusedReplies) {
         Random random = new Random();
-        // Answers user questions based on keywords like "history" or "nutrition."
+        // answers user questions based on keywords like "history" or "nutrition."
 //If no keywords are matched, it gives a random confused response.
 
         // handles specific keywords in the question
@@ -177,7 +178,7 @@ public class ChipotleChatbot { //defines the main class
         } else if (question.contains("guacamole")) {
             System.out.println("Guacamole is made fresh daily at Chipotle using high-quality Hass avocados, lime juice, cilantro, and other ingredients. It's one of the most popular toppings at Chipotle, and while it does cost extra ($2.50), many customers consider it a must-have for their meals.");
         } else {
-            // Random unrecognized response
+            // random unrecognized response
             System.out.println(confusedReplies[random.nextInt(confusedReplies.length)]);
             System.out.println("Try asking about Chipotle's history, nutrition, or food items!");
         }
@@ -198,18 +199,18 @@ public class ChipotleChatbot { //defines the main class
         };
         final String resetColor = "\u001B[0m"; // resets to default color
 
-        // Picks random color
+        // picks random color
         Random random = new Random();
         String randomColor = colors[random.nextInt(colors.length)];
 
-        // Displays suprise message in color
+        // displays suprise message in color
         System.out.println(randomColor + "Surprise! The console text color has changed!" + resetColor);
     }
 
-    // Food class
+    // food class
     class Food {
 
-        //Represents food items with properties for the name, price, and category.
+        // represents food items with properties for the name, price, and category.
 //insstance variabless
         private String name;
         private double price;
